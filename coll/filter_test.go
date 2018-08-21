@@ -28,26 +28,21 @@ func TestFilter(t *testing.T) {
 
 	if len(results) != 2 {
 		t.Errorf("Results length was incorrect, got: %d, want: %d", len(results), 2)
-		return
 	}
 
 	if results[0].(Person).Name != "Foo" {
 		t.Errorf("Data was incorrect, got: %s, want: %s", results[0].(Person).Name, "Foo")
-		return
 	}
 
 	if results[0].(Person).Age != 11 {
 		t.Errorf("Results length was incorrect, got: %d, want: %d", results[0].(Person).Age, 11)
-		return
 	}
 
 	if results[1].(Person).Name != "Fuzz" {
 		t.Errorf("Results length was incorrect, got: %s, want: %s", results[1].(Person).Name, "Fuzz")
-		return
 	}
 
 	if results[1].(Person).Age != 27 {
 		t.Errorf("Results length was incorrect, got: %d, want: %d", results[1].(Person).Age, 27)
-		return
 	}
 }
