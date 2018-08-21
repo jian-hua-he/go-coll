@@ -8,7 +8,7 @@ func ToInterfaces(coll *Collection) []interface{} {
 	return []interface{}(*coll)
 }
 
-func Collect(slice interface{}) Collection {
+func Collect(slice interface{}) *Collection {
 	s := reflect.ValueOf(slice)
 	if s.Kind() != reflect.Slice {
 		panic("Collect: Parameter should be reflect.Slice type")
@@ -20,5 +20,7 @@ func Collect(slice interface{}) Collection {
 		ret[i] = s.Index(i).Interface()
 	}
 
-	return Collection(ret)
+	coll := Collection(ret)
+
+	return &coll
 }
