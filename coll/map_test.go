@@ -14,7 +14,7 @@ func TestMap(t *testing.T) {
 		return n
 	})
 
-	for _, v := range *results {
+	for _, v := range results {
 		n := reflect.ValueOf(v)
 		if n.Kind() != reflect.Int {
 			t.Errorf("Results type was incorrect, got: %T, want: %s", v, reflect.Int)
