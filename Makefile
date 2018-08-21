@@ -1,4 +1,4 @@
-DOCKER_VOLUME_PATH = /coll
+DOCKER_VOLUME_PATH = /go/src/go-coll
 DOCKER_IMAGE = golang:1.11-rc
 
 .PHONY: bash
@@ -11,4 +11,4 @@ go-version:
 
 .PHONY: go-test
 go-test:
-	docker run -v $(PWD):$(DOCKER_VOLUME_PATH) --rm $(DOCKER_IMAGE) bash -c "cd $(DOCKER_VOLUME_PATH)&& go test"
+	docker run -v $(PWD):$(DOCKER_VOLUME_PATH) --rm $(DOCKER_IMAGE) bash -c "cd $(DOCKER_VOLUME_PATH)/coll && go test"
