@@ -22,3 +22,7 @@ func Collect(slice interface{}) Collection {
 
 	return Collection(ret)
 }
+
+func Push(coll Collection, v interface{}) Collection {
+	return append(coll, v)
+}
