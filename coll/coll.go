@@ -26,3 +26,23 @@ func Collect(slice interface{}) Collection {
 func Push(coll Collection, v interface{}) Collection {
 	return append(coll, v)
 }
+
+func Pop(coll Collection) (interface{}, Collection) {
+	len := len(coll)
+	if len == 0 {
+		return nil, coll
+	}
+
+	arr := ToInterfaces(coll)
+	return arr[len-1], arr[:len-1]
+}
+
+func Shift(coll Collection) (interface{}, Collection) {
+	len := len(coll)
+	if len == 0 {
+		return nil, coll
+	}
+
+	arr := ToInterfaces(coll)
+	return arr[0], arr[1:len]
+}
