@@ -7,9 +7,9 @@ import (
 )
 
 func TestMap(t *testing.T) {
-	arr := []string{"1", "2", "3", "4", "5"}
+	coll := Collection{"1", "2", "3", "4", "5"}
 
-	results := Collect(arr).Map(func(v interface{}) interface{} {
+	results := coll.Map(func(v interface{}) interface{} {
 		n, _ := strconv.Atoi(v.(string))
 		return n
 	})

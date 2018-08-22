@@ -14,35 +14,15 @@ func Collect(slice interface{}) Collection {
 		panic("Collect: Parameter should be reflect.Slice type")
 	}
 
-	ret := make([]interface{}, s.Len())
+	arr := make([]interface{}, s.Len())
 
 	for i := 0; i < s.Len(); i++ {
-		ret[i] = s.Index(i).Interface()
+		arr[i] = s.Index(i).Interface()
 	}
 
-	return Collection(ret)
+	return Collection(arr)
 }
 
-func Push(coll Collection, v interface{}) Collection {
-	return append(coll, v)
-}
-
-func Pop(coll Collection) (interface{}, Collection) {
-	len := len(coll)
-	if len == 0 {
-		return nil, coll
-	}
-
-	arr := ToInterfaces(coll)
-	return arr[len-1], arr[:len-1]
-}
-
-func Shift(coll Collection) (interface{}, Collection) {
-	len := len(coll)
-	if len == 0 {
-		return nil, coll
-	}
-
-	arr := ToInterfaces(coll)
-	return arr[0], arr[1:len]
+func (coll *Collection) Push(v interface{}) {
+	*coll = append(*coll, v)
 }
