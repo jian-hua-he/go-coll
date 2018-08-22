@@ -1,1 +1,1 @@
-# GoColl
+# Use Collection with Golang
