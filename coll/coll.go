@@ -26,3 +26,7 @@ func Collect(slice interface{}) Collection {
 func (coll *Collection) Push(v interface{}) {
 	*coll = append(*coll, v)
 }
+
+func (coll *Collection) Get(i int) interface{} {
+	return ToInterfaces(*coll)[i]
+}
