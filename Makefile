@@ -1,4 +1,4 @@
-DOCKER_VOLUME_PATH = /go/src/go-coll
+DOCKER_VOLUME_PATH = /go/src/github.com/jian-hua-he/go-coll
 DOCKER_IMAGE = golang:1.11-rc
 
 .PHONY: bash
