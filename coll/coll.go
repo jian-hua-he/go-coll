@@ -23,6 +23,10 @@ func Collect(slice interface{}) Collection {
 	return Collection(arr)
 }
 
+func (coll *Collection) Len() int {
+	return len(*coll)
+}
+
 func (coll *Collection) Push(v interface{}) {
 	*coll = append(*coll, v)
 }
