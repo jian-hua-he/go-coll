@@ -9,8 +9,6 @@ type Pet struct {
 }
 
 func TestContains(t *testing.T) {
-	t.Log("Test Contains Start")
-
 	pets := Collection{
 		Pet{
 			Owner:    "John Dow",
@@ -29,19 +27,17 @@ func TestContains(t *testing.T) {
 		},
 	}
 
-	r1 := !pets.Contains(func(v interface{}) bool {
-		return v.(Pet).Category > "Robot"
+	r1 := pets.Contains(func(v interface{}) bool {
+		return v.(Pet).Category == "Robot"
 	})
 	if !r1 {
 		t.Errorf("Data was incorrect, got: %v, want: %v", r1, true)
 	}
 
-	r2 := !pets.Contains(func(v interface{}) bool {
+	r2 := pets.Contains(func(v interface{}) bool {
 		return v.(Pet).Name == "BB-8" && v.(Pet).Owner == "Jesse Pinkman"
 	})
 	if r2 {
 		t.Errorf("Data was incorrect, got: %v, wnat: %v", r2, false)
 	}
-
-	t.Log("Test Contains Finish")
 }
