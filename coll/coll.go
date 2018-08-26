@@ -4,6 +4,10 @@ import "reflect"
 
 type Collection []interface{}
 
+type BoolFunc func(v interface{}) bool
+
+type BoolFuncWithIndex func(v interface{}, i int) bool
+
 func ToInterfaces(coll Collection) []interface{} {
 	return []interface{}(coll)
 }

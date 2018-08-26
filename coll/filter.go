@@ -1,10 +1,6 @@
 package coll
 
-type FilterFunc func(v interface{}) bool
-
-type FilterFuncWithIndex func(v interface{}, i int) bool
-
-func (coll *Collection) Filter(f FilterFunc) Collection {
+func (coll *Collection) Filter(f BoolFunc) Collection {
 	results := make(Collection, 0)
 	for _, v := range *coll {
 		if f(v) {
@@ -15,7 +11,7 @@ func (coll *Collection) Filter(f FilterFunc) Collection {
 	return results
 }
 
-func (coll *Collection) FilterWithIndex(f FilterFuncWithIndex) Collection {
+func (coll *Collection) FilterWithIndex(f BoolFuncWithIndex) Collection {
 	results := make(Collection, 0)
 	for i, v := range *coll {
 		if f(v, i) {
