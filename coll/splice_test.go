@@ -64,11 +64,7 @@ func TestSpliceLen(t *testing.T) {
 	}
 
 	// Except r2 = Collection{1}
-	t.Logf("ORIGIN: %v", coll)
-	t.Log("COLL[0:1]")
 	r2 := coll.SpliceLen(0, 1)
-	t.Logf("R2: %v", r2)
-	t.Logf("COLL: %v", coll)
 	if len(r2) != 1 {
 		t.Errorf("Collection length was incorrect, get: %d, want: %d", len(r2), 1)
 	}
