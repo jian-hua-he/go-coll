@@ -3,10 +3,10 @@ package coll
 import "testing"
 
 func TestSort(t *testing.T) {
-	coll := Collection{1, 2, 3, 4, 5}
+	coll := Collection{3, 5, 1, 4, 2}
 
 	coll.Sort(func(a interface{}, b interface{}) bool {
-		return a.(int) > b.(int)
+		return a.(int) < b.(int)
 	})
 
 	arr := ToInterfaces(coll)
