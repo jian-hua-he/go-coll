@@ -10,6 +10,6 @@ func TestReduce(t *testing.T) {
 	}, 5)
 
 	if r1 != 15 {
-		t.Errorf("Data was incorredt, get: %d, want: %d", r1, 15)
+		t.Errorf("Data was incorrect, get: %d, want: %d", r1, 15)
 	}
 }
