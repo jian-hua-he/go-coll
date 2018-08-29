@@ -2,12 +2,6 @@ package coll
 
 import "testing"
 
-type Pet struct {
-	Owner    string
-	Category string
-	Name     string
-}
-
 func TestContains(t *testing.T) {
 	pets := Collection{
 		Pet{

@@ -2,11 +2,6 @@ package coll
 
 import "testing"
 
-type Person struct {
-	Name string
-	Age  int
-}
-
 func TestFilter(t *testing.T) {
 	pList := Collection{
 		Person{

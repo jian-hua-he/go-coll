@@ -2,6 +2,17 @@ package coll
 
 import "testing"
 
+type Pet struct {
+	Owner    string
+	Category string
+	Name     string
+}
+
+type Person struct {
+	Name string
+	Age  int
+}
+
 func TestPush(t *testing.T) {
 	coll := Collection{1, 2, 3, 4, 5}
 
