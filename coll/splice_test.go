@@ -14,13 +14,13 @@ func TestSplice(t *testing.T) {
 	}
 	arr1 := []interface{}(r1)
 	if arr1[0] != 3 {
-		t.Errorf("Data was incorredt, get: %d, want: %d", arr1[0], 3)
+		t.Errorf("Data was incorrect, get: %d, want: %d", arr1[0], 3)
 	}
 	if arr1[1] != 4 {
-		t.Errorf("Data was incorredt, get: %d, want: %d", arr1[1], 4)
+		t.Errorf("Data was incorrect, get: %d, want: %d", arr1[1], 4)
 	}
 	if arr1[2] != 5 {
-		t.Errorf("Data was incorredt, get: %d, want: %d", arr1[2], 5)
+		t.Errorf("Data was incorrect, get: %d, want: %d", arr1[2], 5)
 	}
 
 	r2 := coll.Splice(0)

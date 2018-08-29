@@ -11,18 +11,18 @@ func TestSort(t *testing.T) {
 
 	arr := ToInterfaces(coll)
 	if arr[0] != 5 {
-		t.Errorf("Data was incorredt, get: %d, want: %d", arr[0], 5)
+		t.Errorf("Data was incorrect, get: %d, want: %d", arr[0], 5)
 	}
 	if arr[1] != 4 {
-		t.Errorf("Data was incorredt, get: %d, want: %d", arr[1], 4)
+		t.Errorf("Data was incorrect, get: %d, want: %d", arr[1], 4)
 	}
 	if arr[2] != 3 {
-		t.Errorf("Data was incorredt, get: %d, want: %d", arr[2], 3)
+		t.Errorf("Data was incorrect, get: %d, want: %d", arr[2], 3)
 	}
 	if arr[3] != 2 {
-		t.Errorf("Data was incorredt, get: %d, want: %d", arr[3], 2)
+		t.Errorf("Data was incorrect, get: %d, want: %d", arr[3], 2)
 	}
 	if arr[4] != 1 {
-		t.Errorf("Data was incorredt, get: %d, want: %d", arr[4], 1)
+		t.Errorf("Data was incorrect, get: %d, want: %d", arr[4], 1)
 	}
 }
