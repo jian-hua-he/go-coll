@@ -1,7 +1,7 @@
 package coll
 
 // ReduceFunc ...
-type ReduceFunc func(c interface{}, i interface{}) interface{}
+type ReduceFunc func(a interface{}, c interface{}) interface{}
 
 // Reduce ...
 func (coll *Collection) Reduce(f ReduceFunc, init interface{}) (r interface{}) {
