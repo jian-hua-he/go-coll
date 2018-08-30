@@ -1,11 +1,13 @@
 package coll
 
+// Splice
 func (coll *Collection) Splice(i int) Collection {
 	arr := ToInterfaces(*coll)
 	*coll = arr[:i]
 	return arr[i:]
 }
 
+// SpliceLen
 func (coll *Collection) SpliceLen(i int, l int) Collection {
 	arr := ToInterfaces(*coll)
 

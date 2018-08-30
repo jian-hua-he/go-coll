@@ -1,5 +1,6 @@
 package coll
 
+// Remove
 func (coll *Collection) Remove(i int) {
 	len := len(*coll)
 	if len == 0 {

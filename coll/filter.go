@@ -1,5 +1,6 @@
 package coll
 
+// Filter
 func (coll *Collection) Filter(f BoolFunc) Collection {
 	results := make(Collection, 0)
 	for _, v := range *coll {
@@ -11,6 +12,7 @@ func (coll *Collection) Filter(f BoolFunc) Collection {
 	return results
 }
 
+// FilterWithIndex
 func (coll *Collection) FilterWithIndex(f BoolFuncWithIndex) Collection {
 	results := make(Collection, 0)
 	for i, v := range *coll {

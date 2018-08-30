@@ -1,5 +1,6 @@
 package coll
 
+// Pop
 func (coll *Collection) Pop() interface{} {
 	len := len(*coll)
 	if len == 0 {

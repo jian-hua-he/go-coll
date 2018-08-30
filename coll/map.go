@@ -1,5 +1,6 @@
 package coll
 
+// MapFunc
 type MapFunc func(v interface{}) interface{}
 
 // Map will receive a MapFunc and return a new Collection

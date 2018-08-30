@@ -1,7 +1,9 @@
 package coll
 
+// SortFunc
 type SortFunc func(a interface{}, b interface{}) bool
 
+// Sort
 func (coll *Collection) Sort(f SortFunc) {
 	l := len(*coll)
 	arr := ToInterfaces(*coll)

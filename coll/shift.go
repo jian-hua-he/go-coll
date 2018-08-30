@@ -1,5 +1,6 @@
 package coll
 
+// Shift
 func (coll *Collection) Shift() interface{} {
 	len := len(*coll)
 	if len == 0 {

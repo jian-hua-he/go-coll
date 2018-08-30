@@ -2,18 +2,21 @@ package coll
 
 import "reflect"
 
+// Collection
 type Collection []interface{}
 
+// BoolFunc
 type BoolFunc func(v interface{}) bool
 
+// BoolFuncWithIndex
 type BoolFuncWithIndex func(v interface{}, i int) bool
 
-// Convert Collection to []interface{}
+// ToInterfaces convert Collection to []interface{}
 func ToInterfaces(coll Collection) []interface{} {
 	return []interface{}(coll)
 }
 
-// Convert any type of slice to Collection type
+// Collect convert any type of slice to Collection type
 func Collect(slice interface{}) Collection {
 	s := reflect.ValueOf(slice)
 	if s.Kind() != reflect.Slice {
@@ -29,17 +32,17 @@ func Collect(slice interface{}) Collection {
 	return Collection(arr)
 }
 
-// Return Collection length
+// Len return Collection length
 func (coll *Collection) Len() int {
 	return len(*coll)
 }
 
-// Append an element to Collection
+// Push append an element to Collection
 func (coll *Collection) Push(v interface{}) {
 	*coll = append(*coll, v)
 }
 
-// Return an element in Collection index
+// Get return an element in Collection index
 func (coll *Collection) Get(i int) interface{} {
 	return ToInterfaces(*coll)[i]
 }
