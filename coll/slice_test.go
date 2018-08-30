@@ -30,4 +30,18 @@ func TestSliceLen(t *testing.T) {
 	if slice1[5] != 10 {
 		t.Errorf("Data was incorrect, get: %d, want: %d", slice1[5], 10)
 	}
+
+	slice2 := coll.SliceLen(4, 2)
+	if len(coll) != 10 {
+		t.Errorf("Collection length was incorrect, get: %d, want: %d", len(coll), 10)
+	}
+	if len(slice2) != 2 {
+		t.Errorf("Data was incorrect, get: %d, want: %d", len(slice2), 2)
+	}
+	if slice2[0] != 5 {
+		t.Errorf("Data was incorrect, get: %d, want: %d", slice2[0], 5)
+	}
+	if slice2[1] != 6 {
+		t.Errorf("Data was incorrect, get: %d, want: %d", slice2[1], 6)
+	}
 }
