@@ -2,6 +2,27 @@ package coll
 
 import "testing"
 
+func TestSlice(t *testing.T) {
+	coll := Collection{1, 2, 3, 4, 5, 6}
+
+	slice := coll.Slice(3)
+	if len(coll) != 6 {
+		t.Errorf("Collection length was incorrect, get: %d, want: %d", len(coll), 6)
+	}
+	if len(slice) != 3 {
+		t.Errorf("Data was incorrect, get: %d, want: %d", len(slice), 3)
+	}
+	if slice[0] != 4 {
+		t.Errorf("Data was incorrect, get: %d, want: %d", slice[0], 4)
+	}
+	if slice[1] != 5 {
+		t.Errorf("Data was incorrect, get: %d, want: %d", slice[1], 5)
+	}
+	if slice[2] != 6 {
+		t.Errorf("Data was incorrect, get: %d, want: %d", slice[2], 6)
+	}
+}
+
 func TestSliceLen(t *testing.T) {
 	coll := Collection{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
