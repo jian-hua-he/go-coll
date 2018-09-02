@@ -2,13 +2,14 @@ package coll
 
 import "reflect"
 
-// Collection
+// Collection is a slice of interface
 type Collection []interface{}
 
-// BoolFunc
+// BoolFunc is a function that returns bool with given item
 type BoolFunc func(v interface{}) bool
 
-// BoolFuncWithIndex
+// BoolFuncWithIndex is a function that returns bool
+// with two parameters: item and index
 type BoolFuncWithIndex func(v interface{}, i int) bool
 
 // ToInterfaces convert Collection to []interface{}
