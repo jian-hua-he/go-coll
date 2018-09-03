@@ -1,6 +1,7 @@
 package coll
 
-// Shift
+// Shift mehtod return the first element of Collection
+// and change the Collection
 func (coll *Collection) Shift() interface{} {
 	len := len(*coll)
 	if len == 0 {
