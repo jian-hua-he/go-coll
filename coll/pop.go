@@ -1,6 +1,7 @@
 package coll
 
-// Pop
+// Pop return a interface of the last Collection
+// and change origin Collection.
 func (coll *Collection) Pop() interface{} {
 	len := len(*coll)
 	if len == 0 {
