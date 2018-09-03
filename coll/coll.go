@@ -33,17 +33,17 @@ func Collect(slice interface{}) Collection {
 	return Collection(arr)
 }
 
-// Len return Collection length
+// Len method return Collection length
 func (coll *Collection) Len() int {
 	return len(*coll)
 }
 
-// Push append an element to Collection
+// Push method append an element to Collection
 func (coll *Collection) Push(v interface{}) {
 	*coll = append(*coll, v)
 }
 
-// Get return an element in Collection index
+// Get method return an element in Collection index
 func (coll *Collection) Get(i int) interface{} {
 	return ToInterfaces(*coll)[i]
 }

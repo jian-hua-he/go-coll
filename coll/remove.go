@@ -1,6 +1,6 @@
 package coll
 
-// Remove
+// Remove method delete the item from Collection with index position.
 func (coll *Collection) Remove(i int) {
 	len := len(*coll)
 	if len == 0 {
