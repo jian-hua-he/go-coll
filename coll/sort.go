@@ -1,9 +1,10 @@
 package coll
 
-// SortFunc
+// SortFunc given two parameters and return bool.
+// Inside SortFunc determind the way to swap elements in Collection.
 type SortFunc func(a interface{}, b interface{}) bool
 
-// Sort
+// Sort given a SortFunc callback and return new sorted Collection.
 func (coll *Collection) Sort(f SortFunc) {
 	l := len(*coll)
 	arr := ToInterfaces(*coll)
