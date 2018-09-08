@@ -3,11 +3,11 @@ package coll
 // Splice
 func (coll *Collection) Splice(i int) Collection {
 	arr := ToInterfaces(*coll)
-	r := make(Collection, 0)
-	r = append(r, arr[i:]...)
+	r := make(Collection, len(arr[i:]))
+	copy(r, arr[i:])
 
-	p := make(Collection, 0)
-	p = append(p, arr[:i]...)
+	p := make(Collection, len(arr[:i]))
+	copy(p, arr[:i])
 	*coll = p
 
 	return r
