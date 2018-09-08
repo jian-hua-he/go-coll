@@ -35,6 +35,12 @@ func TestSplice(t *testing.T) {
 	if len(coll) != 0 {
 		t.Errorf("Collection length was incorrect, get: %d, want: %d", len(coll), 0)
 	}
+	if r2[0] != 1 {
+		t.Errorf("Data was incorrect, get: %d, want: %d", r2[0], 1)
+	}
+	if r2[1] != 2 {
+		t.Errorf("Data was incorrect, get: %d, want: %d", r2[1], 2)
+	}
 }
 
 func TestSpliceLen(t *testing.T) {
